@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+    <extension 
+         point="org.imixs.eclipse.workflowmodeler.ixeditorpages">
+      <page
+            name="Profile"
+            class="org.imixs.eclipse.workflowmodeler.ui.editors.WorkflowModelProfilePage">
+      </page>
+     
+   </extension>
+ 
+
+
+
+
+	<!-- Process and Activity Property Tabs -->
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+         <propertyCategory category="processentity"/>
+         <propertyCategory category="activityentity"/>
+      </propertyContributor>
+   </extension>
+   
+    <!-- Process Tabs -->
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+         <propertyTab
+            category="processentity"
+            id="org.imixs.eclipse.processtab.application"
+            afterTab="org.imixs.eclipse.processtab.abstract"
+            label="Application"/>        
+      </propertyTabs>
+   </extension>
+   
+
+	<!-- Activity Tabs -->
+	
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+
+
+		<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.rule"
+                afterTab="org.imixs.eclipse.activitytab.owner"
+            label="Rule"/>     
+ 		<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.result"
+                afterTab="org.imixs.eclipse.activitytab.rule"
+            label="Result"/>      
+		<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.version"
+                afterTab="org.imixs.eclipse.activitytab.result"
+            label="Version"/>      		
+		<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.archive"
+                afterTab="org.imixs.eclipse.activitytab.version"
+            label="Archive"/>    
+        <propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.report"
+                afterTab="org.imixs.eclipse.activitytab.archive"
+            label="Report"/>     		
+		<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.schedule"
+                afterTab="org.imixs.eclipse.activitytab.report"
+            label="Schedule"/>      		
+      </propertyTabs>
+     
+   </extension>
+
+
+
+	<!-- Process Sections -->
+  	<extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+        
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ProcessSectionApplication"
+               id="org.imixs.eclipse.processsection.application"
+               tab="org.imixs.eclipse.processtab.application">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IProcessPropertySource"/>
+         </propertySection>
+      </propertySections>
+   </extension> 
+   	
+
+<!-- Activity Sections -->
+
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+   
+      <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionRule"
+               id="org.imixs.eclipse.activitysection.rule"
+               tab="org.imixs.eclipse.activitytab.rule">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+   
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionResult"
+               id="org.imixs.eclipse.activitysection.result"
+               tab="org.imixs.eclipse.activitytab.result">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+         
+ 		<propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionVersion"
+               id="org.imixs.eclipse.activitysection.version"
+               tab="org.imixs.eclipse.activitytab.version">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+                  
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionArchive"
+               id="org.imixs.eclipse.activitysection.archive"
+               tab="org.imixs.eclipse.activitytab.archive">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+  	 <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionReport"
+               id="org.imixs.eclipse.activitysection.report"
+               tab="org.imixs.eclipse.activitytab.report">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+                  
+    	<propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionSchedule"
+               id="org.imixs.eclipse.activitysection.schedule"
+               tab="org.imixs.eclipse.activitytab.schedule">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>         
+         
+      </propertySections>
+   </extension> 
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+   
+</plugin>

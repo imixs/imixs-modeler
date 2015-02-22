@@ -1,0 +1,14 @@
+is it possible to define an individual style of the graphical editor.
+
+yes. there is an extension point called "org.imixs.eclipse.workflowmodeler.editorstyles" 
+were you can define your one individual style. 
+You have to implemtn the IEditorStyle Interface an register yout extension at the 
+extension points of your plugin.
+
+
+can I defin additional property tabs?
+
+Yes you must implement the IWorkflowPropertyTab Interface an register your porperty tab at
+one of the two extension points for the Activity or Process Property Tabs.
+
+

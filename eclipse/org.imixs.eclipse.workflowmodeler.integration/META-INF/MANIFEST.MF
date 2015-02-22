@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Imixs Workflow Modeler Integration Plug-in
+Bundle-SymbolicName: org.imixs.eclipse.workflowmodeler.integration; singleton:=true
+Bundle-Version: 2.4.1.qualifier
+Bundle-Vendor: Imixs Software Solutions GmbH
+Require-Bundle: org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.ui.forms,
+ org.eclipse.ui.views,
+ org.imixs.eclipse.workflowmodeler,
+ org.eclipse.ui.views.properties.tabbed
+Bundle-ActivationPolicy: lazy
+

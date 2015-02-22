@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Lib Plug-in
+Bundle-SymbolicName: org.imixs.eclipse.workflow.lib
+Bundle-Version: 3.0.0
+Bundle-Vendor: Imixs Software Solutions GmbH
+Bundle-ClassPath: lib/imixs-workflow-core-3.0.0.jar
+Export-Package: org.imixs.workflow,
+ org.imixs.workflow.exceptions,
+ org.imixs.workflow.services.rest,
+ org.imixs.workflow.util,
+ org.imixs.workflow.xml

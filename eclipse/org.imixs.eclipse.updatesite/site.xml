@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site
+      mirrorsURL="http://www.imixs.org/org.imixs.eclipse.updatesite/site.xml">
+   <description name="Imixs Workflow" url="http://www.imixs.org/org.imixs.eclipse.updatesite/site.xml">
+      The Imixs.org Updatesite provides tools for building workflowsystems and modeling business cases .
+   </description>
+   <feature url="features/org.imixs.eclipse.workflowmodeler.webservice.feature_1.5.0.v201010052030.jar" id="org.imixs.eclipse.workflowmodeler.webservice.feature" version="1.5.0.v201010052030">
+      <category name="Imixs Workflow Modeler"/>
+   </feature>
+   <feature url="features/org.imixs.eclipse.workflowreports.feature_1.1.0.v201010061200.jar" id="org.imixs.eclipse.workflowreports.feature" version="1.1.0.v201010061200">
+      <category name="Imixs Workflow Modeler"/>
+   </feature>
+   <feature url="features/org.imixs.eclipse.workflowmodeler.integration.feature_2.4.1.201502151335.jar" id="org.imixs.eclipse.workflowmodeler.integration.feature" version="2.4.1.201502151335">
+      <category name="Imixs Workflow Modeler"/>
+   </feature>
+   <feature url="features/org.imixs.eclipse.workflowmodeler.feature_2.4.2.201502151335.jar" id="org.imixs.eclipse.workflowmodeler.feature" version="2.4.2.201502151335">
+      <category name="Imixs Workflow Modeler"/>
+   </feature>
+   <category-def name="Imixs Workflow Modeler" label="Imixs Workflow Modeler">
+      <description>
+         Workflow modelling tools for the Imixs Open Source Workflow project
+      </description>
+   </category-def>
+</site>
