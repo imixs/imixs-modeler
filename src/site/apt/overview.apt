@@ -1,0 +1,28 @@
+
+Overview
+~~~~~~~~~~~~~~
+
+ The IX Workflow Modeler is a graphical tool for workflow modeling.
+ WorkflowModels can be created and edited independently of the application logic, and later be combined with a 
+ workflow application. This allows fast, transparent and an easy maintenance of business processes.
+ The IX Workflow Modeler is implemented as an Eclipse plug-in and profits from all advantages offered by the 
+ Eclipse IDE. 
+ 
+The general concepts 
+~~~~~~~~~~~~~~~~~~~~
+ Through projects, WorkflowModels that have already been created can be edited individually or in groups. 
+ If resource management is available, centralized administration is possible in addition to a centralized version 
+ control. Different version statuses can be queried at any time. Subsequent transfer of creative models to 
+ different application servers in a business application is possible through ServerConnectors.
+
+ The IX Workflow Modeler plug-in is available for Eclipse and the IBM Rational Software Development Platform. 
+ It integrates seamlessly into the development environments and makes use of their flexible tools and expansion 
+ possibilities.
+
+ The plug-in is freely available as an Open Source version and can be adapted to the individual requirements or 
+ expanded at any time through predefined extension points. The IX Workflow API can integrate the created 
+ WorkflowModels at any time to facilitate further processing. 
+ 
+[images/image_small_01.gif]
+ 
+[images/image_small_02.gif]

@@ -1,0 +1,58 @@
+
+Installation
+~~~~~~~~~~~~~~
+
+ For installation of the Imixs Workflow Modeler, you will need an executable Eclipse installation (version 3.x) 
+ or any other Eclipse based IDE (e.g. Oracle, SAP, IBM). If you do not have an Eclipse installation 
+ yet, you can download Eclipse from the {{{http://www.eclipse.org/}Eclipse website}}.
+
+*Installation of Eclipse IDE
+~~~~~~~~~~~~~~
+ Before installing Eclipse, you should make sure that you have enough free storage capacity on your PC. 
+ Eclipse requires a minimum of 500 MByte of free storage capacity on the hard disk. Your PC should have a main 
+ memory capacity of at least 512 MByte. 
+ Eclipse is available in different packages. These are optimized to different types of software developers.
+ 
+ The current version of Eclipse can be downloaded from here:  {{http://www.eclipse.org/downloads/}}. 
+ 
+ When Eclipse is launched the first time, it automatically opens a welcome page containing all-important information as well 
+ as tutorials for a quick start with Eclipse.
+
+*Installation of the Imixs Workflow Modeler Plug-In
+~~~~~~~~~~~~~~
+ The Imixs Workflow Modeler Plugin is available online from the Imixs Update site. 
+ This makes it easy to add and update the plug-in within Eclipse.
+
+ 
+**Update-Site: {{http://www.imixs.org/org.imixs.eclipse.updatesite}}
+~~~~~~~~~~~~~~ 
+  \ 
+ 
+ 
+ To install the Imixs Workflow Modeler, choose the menu option "Help > Install new Software" within your Eclipse IDE.
+ 
+ Enter the Update-Site URL and select the Component 'Imixs Workflow Modeller'.
+ Click 'Next' to complete the installation.
+
+[images/Install_001.png] 
+
+  
+ Finally you have to restart your Eclipse IDE.
+ 
+ 
+* BPMN2 Modeler
+~~~~~~~~~~~~~~ 
+ In addition to the Imixs Modeller the Eclipse BPMN Modeller can be installed to document business models in BPMN.
+ The BPMN2 Modeler is a graphical modeling tool which allows creation and editing of 
+ BPMN ( Business Process Modeling Notation ) diagrams. 
+ 
+[images/auftrag.png] 
+
+ The tool is compatible with the BPMN 2.0 specification proposed by the Object Management Group.
+
+ See: {{http://eclipse.org/bpmn2-modeler/}} 
+
+
+ For installation choose the updatesite compatible with your Eclipse Version: 
+ 
+ {{http://download.eclipse.org/bpmn2-modeler/updates/}}

@@ -1,0 +1,52 @@
+
+About the Imixs Workflow Modeler
+~~~~~~~~~~~~~~
+
+ The Imixs Workflow Modeler is a graphical tool for workflow modeling.
+
+[images/image_small_02.gif]
+ 
+ WorkflowModels can be created and edited independently of the application logic, and later be combined with a 
+ workflow application. This allows fast, transparent and an easy maintenance of business processes.
+ The IX Workflow Modeler is implemented as an Eclipse plug-in and profits from all advantages offered by the 
+ Eclipse IDE.
+
+ The plug-in is freely available as an Open Source version and can be adapted to the individual requirements or 
+ expanded at any time through predefined extension points. 
+
+ The following sections containing a javadoc including the description of the different classes and interfaces 
+ of this Implementation. 
+
+* General Goals
+~~~~~~~~~~~~~~~~~~~~
+
+ The goal of this project is to provide an easy to use java based technology which focus on human based workflow. 
+ This means that the Imixs Workflow is typical used for Human-To-Human Workflows but it can also be used for 
+ technical business process management. 
+
+ The goals of the Imixs Workflow Modeler project is to provide developers and users of a Workflow Management System
+ with an easy tool to model a business process.
+ The Eclipse based Modeler allows to model typical business cases and provides a Web Service Interface to update
+ any Workflow Management System build on the Imixs Workflow API with model data.
+ 
+ The plug-in is freely available as an Open Source version and can be adapted to the individual requirements or
+ expanded at any time through predefined extension points. The IX Workflow API can integrate the created 
+ WorkflowModels at any time to facilitate further processing.  
+  
+      [Note:] If you want to run a Workflow Management System inside your own Application you can use 
+      the {{{/jee/}Imixs JEE Workflow}} components.  
+      These JEE components provide an easy to use Workflow Management System based on the Imixs Workflow API.
+      Using this components there is no need to implement your own workflow system. But some of the concepts
+      of the Imixs Workflow API explained here are fundamental and will be recovered by other Imixs Workflow 
+      compoents.
+
+ This project site gives an overview over the basic concepts behind the Imixs Workflow Modeler 
+ and you will find also examples how to work with the tool. 
+
+* License
+~~~~~~~~~~~~~~~~~~~~
+ All results of the Imixs Workflow project and subprojects are subject to the GNU General Public License (GPL). 
+ You are free to use the results of the project in you own software project. We also invite you to participate 
+ as much as you wish. Every project obtains its strengths in virtue of the persons involved. The role and 
+ responsibility of everybody involved in this project is based on merits.
+ Every input counts!   

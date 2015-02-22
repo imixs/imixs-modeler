@@ -1,0 +1,23 @@
+
+The .ixm Model File
+~~~~~~~~~~~~~~
+
+ Within the IX Workflow Modeler, the model data are stored in an IXM file. The model file has the "*.ixm" 
+ file-name extension. It is an XML file that stores all information of the WorkflowModel in an XML tree 
+ according to the following scheme.
+ 
+[images/schema01.GIF]
+ 
+ The ID attributes for the ProcessEntities are unique for all models. This means that an error is 
+ detected during validation if the same ID has been assigned more than once. The same applies to the ID 
+ attributes for the ActivityEntities within a ProcessEntity.
+
+ The data of a ModelEntity or a configuration entry are managed through an ItemCollection. 
+ This allows including attributes as desired and is mapped within the Imixs Workflow API through 
+ class org.imixs.workflow.ItemCollection.
+ 
+[images/schema02.GIF]
+
+ You can also create and manage every model file with an XML tool. If you manage several WorkflowModels, 
+ the files can be exchanged as desired or shared within a team by using a tool for centralized version 
+ control.
