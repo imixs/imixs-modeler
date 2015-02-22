@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+  
+
+   <extension-point id="editorstyles" name="Graphical Editor Style" schema="schema/editorstyle.exsd"/>
+   <extension-point id="ixeditorpages" name="IXXMLEditor Workflow Pages" schema="schema/ixeditorpages.exsd"/>
+   <extension-point id="serverconnectors" name="Server Connectors" schema="schema/serverconnectors.exsd"/>
+
+   <extension 
+         point="org.eclipse.ui.editors">
+      <editor
+            name="IXGraphicalEditor"
+            default="false"
+            icon="icons/editor/processtree.gif"
+            class="org.imixs.eclipse.workflowmodeler.ui.editors.IXGraphicalEditor"
+            contributorClass="org.imixs.eclipse.workflowmodeler.ui.editors.IXActionBarContributor"
+            id="org.imixs.eclipse.workflowmodeler.IXGraphicalEditor">
+      </editor>
+   </extension>
+   <extension
+         id="org.imixs.eclipse.workflowmodeler.WorkflowModelView"
+         name="Workflow Model"
+         point="org.eclipse.ui.views">
+      <view
+            name="Workflow Model"
+            icon="icons/viewer/workflowmodel.gif"
+            class="org.imixs.eclipse.workflowmodeler.ui.viewer.WorkflowModelView"
+            id="org.imixs.eclipse.workflowmodeler.viewer.WorkflowModelView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="IX XML Editor"
+            extensions="ixm"
+            icon="icons/editor/workflowmodel.gif"
+            class="org.imixs.eclipse.workflowmodeler.ui.editors.IXXMLEditor"            
+            id="org.imixs.eclipse.workflowmodeler.IXXMLEditor">                          
+      </editor>
+   </extension>
+
+
+
+	
+	
+
+
+	
+
+
+	<!-- Process and Activity Property Tabs -->
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor">
+      <propertyContributor 
+      		contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView"
+      		labelProvider="org.imixs.eclipse.workflowmodeler.ui.properties.PropertyLabelProvider">
+         <propertyCategory category="processentity"/>
+         <propertyCategory category="activityentity"/>
+         <propertyCategory category="processgroup"/>
+      </propertyContributor>
+   </extension>
+   
+    <!-- Group Tabs -->
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+         <propertyTab
+            category="processgroup"
+               id="org.imixs.eclipse.grouptab.basic"
+            label="Basic"/>                 
+      </propertyTabs>
+   </extension>
+   
+   <!-- Process Tabs -->
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+         <propertyTab
+            category="processentity"
+               id="org.imixs.eclipse.processtab.basic"
+            label="Basic"/>        
+         <propertyTab
+            category="processentity"
+            id="org.imixs.eclipse.processtab.abstract"
+            afterTab="org.imixs.eclipse.processtab.basic"
+            label="Abstract"/>        
+      </propertyTabs>
+   </extension>
+
+	<!-- Activity Tabs -->
+	
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs">
+      <propertyTabs contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+
+ 		<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.basic"
+            label="Basic"/>     
+        
+		<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.acl"
+               afterTab="org.imixs.eclipse.activitytab.basic"
+            label="ACL"/>   
+       	<propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.mail"
+               afterTab="org.imixs.eclipse.activitytab.acl"
+            label="Mail"/>   
+       <propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.history"
+               afterTab="org.imixs.eclipse.activitytab.mail"
+            label="History"/>      
+         <propertyTab
+            category="activityentity"
+               id="org.imixs.eclipse.activitytab.owner"
+               afterTab="org.imixs.eclipse.activitytab.history"
+            label="Owner"/>        
+        
+      </propertyTabs>
+     
+   </extension>
+
+	
+<!-- ProcessGroup Section -->
+  	<extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.GroupSectionBasic"
+               id="org.imixs.eclipse.groupsection.basic"
+               tab="org.imixs.eclipse.grouptab.basic">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IGroupPropertySource"/>
+         </propertySection>
+         
+      </propertySections>
+   </extension> 
+
+<!-- Process Sections -->
+  	<extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ProcessSectionBasic"
+               id="org.imixs.eclipse.processsection.basic"
+               tab="org.imixs.eclipse.processtab.basic">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IProcessPropertySource"/>
+         </propertySection>
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ProcessSectionAbstract"
+               id="org.imixs.eclipse.processsection.abstract"
+               tab="org.imixs.eclipse.processtab.abstract">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IProcessPropertySource"/>
+         </propertySection>
+      </propertySections>
+   </extension> 
+
+<!-- Activity Section -->
+
+	<extension point="org.eclipse.ui.views.properties.tabbed.propertySections">
+      <propertySections contributorId="org.imixs.eclipse.workflowmodeler.EntityProperyView">
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionBasic"
+               id="org.imixs.eclipse.activitysection.basic"
+               tab="org.imixs.eclipse.activitytab.basic">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+         
+          <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionBasicAccess"
+               id="org.imixs.eclipse.activitysection.basicaccess"
+               tab="org.imixs.eclipse.activitytab.basic"
+               afterSection="org.imixs.eclipse.activitysection.basic">
+           <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+        
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionACL"
+               id="org.imixs.eclipse.activitysection.acl"
+               tab="org.imixs.eclipse.activitytab.acl">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+         
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionMail"
+               id="org.imixs.eclipse.activitysection.mail"
+               tab="org.imixs.eclipse.activitytab.mail">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+         
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionHistory"
+               id="org.imixs.eclipse.activitysection.history"
+               tab="org.imixs.eclipse.activitytab.history">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+         
+         <propertySection
+               class="org.imixs.eclipse.workflowmodeler.ui.properties.ActivitySectionOwner"
+               id="org.imixs.eclipse.activitysection.owner"
+               tab="org.imixs.eclipse.activitytab.owner">
+            <input type="org.imixs.eclipse.workflowmodeler.model.IActivityPropertySource"/>
+         </propertySection>
+      </propertySections>
+   </extension> 
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            name="Imixs Workflow Modeler"
+            class="org.imixs.eclipse.workflowmodeler.ui.preferences.BasicPage"
+            id="org.imixs.eclipse.workflowmodeler.ui.preferences.basic">
+      </page>
+   </extension>
+   
+  
+
+  
+   <extension
+         point="org.imixs.eclipse.workflowmodeler.ixeditorpages">
+      <page
+            name="Overview"
+            class="org.imixs.eclipse.workflowmodeler.ui.editors.WorkflowModelDefaultPage">
+      </page>
+     
+   </extension>
+   
+   
+   <extension
+         point="org.imixs.eclipse.workflowmodeler.editorstyles">
+    
+      <style
+            name="Popular"
+            class="org.imixs.eclipse.workflowmodeler.styles.popular.PopularStyle">
+      </style>
+      <style
+            name="Technical"
+            class="org.imixs.eclipse.workflowmodeler.styles.popular.TechnicalStyle">
+      </style>
+      <style
+            name="Coffee"
+            class="org.imixs.eclipse.workflowmodeler.styles.popular.CoffeeStyle">
+      </style>
+   </extension>
+  
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Imixs Workflow Modeler"
+            icon="icons/editor/workflowmodel.gif"
+            class="org.imixs.eclipse.workflowmodeler.ui.perspective.ModelerPerspective"
+            id="org.imixs.eclipse.workflowmodeler.ui.perspective.ModelerPerspective">
+      </perspective>
+   </extension>
+   <extension
+         id="newModelWizard"
+         name="Imixs new Model"
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="Imixs Workflow"
+            id="org.imixs.eclipse.workflowmodeler.wizard.category">
+      </category>
+      <wizard
+            category="org.imixs.eclipse.workflowmodeler.wizard.category"
+            class="org.imixs.eclipse.workflowmodeler.wizards.NewModel"
+            icon="icons/editor/processtree.gif"
+            id="org.imixs.eclipse.workflowmodeler.wizards.newmodel"
+            name="new Imixs Workflow Model"
+            preferredPerspectives="org.imixs.eclipse.workflowmodeler.ui.perspective.ModelerPerspective"
+            project="false">
+         <description>
+            Create a new Imixs Workflow Model file.
+         </description>
+      </wizard>
+   </extension>
+
+ 	<extension
+         point="org.eclipse.ui.exportWizards">
+          <category
+            name="Imixs Workflow"
+            id="org.imixs.eclipse.workflowmodeler.wizard.category">
+      </category>
+ 
+      <wizard 
+       category="org.imixs.eclipse.workflowmodeler.wizard.category"
+         id="org.imixs.eclipse.workflowmodeler.wizard.ExportModel23Format"
+         name="Model Format 2.3.x Export"
+         class="org.imixs.eclipse.workflowmodeler.wizards.ExportModel23Format"
+         icon="./icons/editor/processtree.gif"> 
+         <description> 
+            A export wizard to save the old Imixs Modeler file format 
+         </description> 
+         <selection class="org.eclipse.core.resources.IResource"/> 
+      </wizard> 
+   </extension> 
+   
+   
+   
+    
+
+	
+
+
+</plugin>
